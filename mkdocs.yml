@@ -1,1 +1,141 @@
-site_name: My Docs
+# theme variables
+define: &_theme_color "blue"
+
+# Project information
+site_name: sungkimm
+site_url: "https://sungkimm.github.io/"
+edit_uri: ""
+
+# Repository
+repo_url: https://github.com/sungkimm/sungkimm.github.io.git
+repo_name: sungkimm.github.io
+
+# Copyright
+copyright: >
+  Copyright &copy; 2022 sungkimm -
+  <a href="#__consent">Change cookie settings</a>
+
+# Configuration
+theme:
+  name: material
+  features:
+    # Setup
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sticky
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - header.autohide
+    - announce.dismiss
+    # Reference
+    - content.code.annotate
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: *_theme_color
+      accent: *_theme_color
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: *_theme_color
+      accent: *_theme_color
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.ico
+  logo: assets/images/zebra/home.png
+  icon:
+    repo: fontawesome/brands/git-alt
+
+# Plugins
+plugins:
+  - search
+
+# Customization
+extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+      - manage
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sungkimm
+      name: sungkimm's Github
+
+# Free Extensions
+markdown_extensions:
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  # Annotations, Buttons, Images, Diagrams
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # Code blocks
+
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  # Content tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Data tables
+  - tables
+  # Footnotes
+  - footnotes
+  # Formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  # Icons, Emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg # Lists
+
+
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # MathJax
+  - pymdownx.arithmatex:
+      generic: true
+  # Abbreviations (Tooltips)
+  - abbr
+
+# Extra JavaScript
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Page tree
+nav:
+  - kubernetes:
+      - kubernetes/index.md
+      - controller: kubernetes/controller.md
