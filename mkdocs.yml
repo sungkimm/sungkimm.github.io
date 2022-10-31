@@ -136,6 +136,37 @@ extra_javascript:
 
 # Page tree
 nav:
+  - Projects:
+      - Projects/index.md
+      - gempick: 
+        - General: 
+          - Projects/gempick/general/example.md
+        - User Auth: 
+          - Projects/gempick/user-auth/architecture.md
+          - Projects/gempick/user-auth/database.md
+          - Projects/gempick/user-auth/etc.md
+        - Microservice2:
+          - Projects/gempick/microservice2/example.md
+        - Microservice3:
+          - Projects/gempick/microservice3/example.md
+        - Dev Materials:
+          - Projects/gempick/dev-materials/fastapi.md
+          - Projects/gempick/dev-materials/microservice(k8s).md
+          - Projects/gempick/dev-materials/aws.md
+          - Projects/gempick/dev-materials/git.md
+
+        - Development Policy:
+          - Projects/gempick/development-policy/source-code.md
+          - Projects/gempick/development-policy/git.md
+          - Projects/gempick/development-policy/microservice.md
+          - Projects/gempick/development-policy/aws.md
+          
+        - Meeting:
+          - Projects/gempick/meeting/example.md
+        - ETC: 
+          - Projects/gempick/etc/example.md
+
+
   - kubernetes:
       - kubernetes/index.md
       - controller: kubernetes/controller.md
