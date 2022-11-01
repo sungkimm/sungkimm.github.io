@@ -150,7 +150,7 @@ nav:
         - Microservice3:
           - Projects/gempick/microservice3/example.md
         - Dev Materials:
-          - Projects/gempick/dev-materials/fastapi.md
+          - Projects/gempick/dev-materials/restAPI.md
           - Projects/gempick/dev-materials/microservice(k8s)/microservice(k8s).md
           - Projects/gempick/dev-materials/aws.md
           - Projects/gempick/dev-materials/git.md
